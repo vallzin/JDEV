@@ -3,6 +3,7 @@ package cursojava.executavel;
 import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
+import cursojava.classes.Disciplina;
 
 public class PrimeiraClasseJava {
 
@@ -19,16 +20,7 @@ public class PrimeiraClasseJava {
 		String nomeEscola = JOptionPane.showInputDialog("Nome da escola?");
 		String serieMatriculada = JOptionPane.showInputDialog("Série matriculada?");
 		
-		String disciplina1 = JOptionPane.showInputDialog("Disciplina 1?");
-		String nota1 = JOptionPane.showInputDialog("Nota 1?");
-		String disciplina2 = JOptionPane.showInputDialog("Disciplina 2?");
-		String nota2 = JOptionPane.showInputDialog("Nota 2?");
-		String disciplina3 = JOptionPane.showInputDialog("Disciplina 3?");
-		String nota3 = JOptionPane.showInputDialog("Nota 3?");
-		String disciplina4 = JOptionPane.showInputDialog("Disciplina 4?");
-		String nota4 = JOptionPane.showInputDialog("Nota 4?");
-		
-		Aluno aluno1 = new Aluno();//Aqui será o João
+		Aluno aluno1 = new Aluno();
 		aluno1.setNome(nome);
 		aluno1.setIdade(Integer.valueOf(idade));
 		aluno1.setDataNascimento(dataNascimento);
@@ -40,6 +32,33 @@ public class PrimeiraClasseJava {
 		aluno1.setNomeEscola(nomeEscola);
 		aluno1.setSerieMatriculado(serieMatriculada);
 		
+		Disciplina disciplina1 = new Disciplina();
+		disciplina1.setDisciplina("Lógica de Programação");
+		disciplina1.setNota(90);
+		
+		aluno1.getDisciplinas().add(disciplina1);
+		
+		Disciplina disciplina2 = new Disciplina();
+		disciplina2.setDisciplina("introdução ao Java");
+		disciplina2.setNota(89.5);
+		
+		aluno1.getDisciplinas().add(disciplina2);
+		
+		Disciplina disciplina3 = new Disciplina();
+		disciplina3.setDisciplina("Java OO");
+		disciplina3.setNota(79.9);
+		
+		aluno1.getDisciplinas().add(disciplina3);
+		
+		Disciplina disciplina4 = new Disciplina();
+		disciplina4.setDisciplina("Java Avançado");
+		disciplina4.setNota(88.0);
+		
+		aluno1.getDisciplinas().add(disciplina4);
+		
+	
+		
+		
 		
 		/*
 		System.out.println("Nome do aluno: " + aluno1.getNome());
@@ -50,8 +69,11 @@ public class PrimeiraClasseJava {
 		System.out.println("Resultado2 = " + aluno1.getAlunoAprovado2());
 		/*-------------------------------------------------------------------*/
 		
-//		Aluno aluno = new Aluno();
-		System.out.println(aluno1.toString());
+		System.out.println(aluno1);
+		System.out.println("Mádia do aluno = " + aluno1.getMediaNota());
+		System.out.println("Resultado = " + aluno1.getAlunoAprovado2());
+		
+		
 		
 
 	}
