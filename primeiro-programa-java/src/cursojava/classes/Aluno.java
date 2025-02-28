@@ -1,6 +1,9 @@
 package cursojava.classes;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 public class Aluno {
 	
@@ -15,14 +18,14 @@ public class Aluno {
 	private String nomeEscola;
 	private String serieMatriculado;
 	
-	private Disciplina disciplina = new Disciplina();
+	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 	
-	public void setDisciplina(Disciplina disciplina) {
-		this.disciplina = disciplina;
+	public void setDisciplina(List<Disciplina> disciplinas) {
+		this.disciplinas = disciplinas;
 	}
 	
-	public Disciplina getDisciplina() {
-		return disciplina;
+	public List<Disciplina> getDisciplinas() {
+		return disciplinas;
 	}
 	
 	public Aluno() {
@@ -118,10 +121,7 @@ public class Aluno {
 	}
 
 	public double getMediaNota() {
-		return (disciplina.getNota1() + 
-				disciplina.getNota3() + 
-				disciplina.getNota3() + 
-				disciplina.getNota4())/4;
+		return 0;
 	}
 	
 	public boolean getAlunoAprovado() {
@@ -170,35 +170,7 @@ public class Aluno {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
 				+ registroGeral + ", numeroCPF=" + numeroCPF + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
 				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
-				+ serieMatriculado + ", disciplina=" + disciplina + "]";
+				+ serieMatriculado + ", disciplina=" + "]";
 	}
-
-	/*
-	@Override
-	public String toString() {
-		return "Aluno nome =" + this.getNome() + "\n" +
-				"idade =" + this.getIdade() + "\n" + 
-				"data de Nascimento =" + this.getDataNascimento() + "\n" + 
-				"registro Geral =" + this.getRegistroGeral() + "\n" + 
-				"CPF  =" + this.getNumeroCPF() + "\n" + 
-				"nome da Mae =" + this.getNomeMae() + "\n" + 
-				"nome do Pai =" + this.getNomePai() + "\n" + 
-				"data de Matricula =" + this.getDataMatricula() + "\n" + 
-				"nome da Escola =" + this.getNomeEscola() + "\n" + 
-				"serie Matriculado =" + this.getSerieMatriculado() + "\n" + 
-				"disciplina 1 =" + disciplina.getDisciplina1() + "\n" + 
-				"nota 1 =" + disciplina.getNota1() + "\n" + 
-				"disciplina 2 =" + disciplina.getDisciplina2() + "\n" + 
-				"nota 2 =" + disciplina.getNota2() + "\n" + 
-				"disciplina 3 =" + disciplina.getDisciplina3() + "\n" +
-				"nota 3 =" + disciplina.getNota3() + "\n" +
-				"disciplina 4 =" + disciplina.getDisciplina4() + "\n" + 
-				"nota 4 =" + disciplina.getNota4() + "\n" +
-				"Média do aluno = " + getMediaNota() +  "\n" +
-				"Situação do aluno = " + getAlunoAprovado2() + "\n"; 
-				
-	}*/
-	
-	
 	
 }
