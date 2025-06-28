@@ -1,0 +1,5 @@
+INDEX VERSION 1.134
+D:\JDEV2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3897528423.index
+\curso-jsp\src\main\java
+D:\JDEV2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1239803670.index
+\curso-jsp\src\main\java
