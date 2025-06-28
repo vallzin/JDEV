@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<servers>
-  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Apache Tomcat 11 at localhost-config" hostname="localhost" id="Apache Tomcat 11 at localhost" name="Apache Tomcat 11 at localhost" runtime-id="Apache Tomcat 11" server-type="org.eclipse.jst.server.tomcat.110" server-type-id="org.eclipse.jst.server.tomcat.110" start-timeout="60" stop-timeout="15" testEnvironment="false" timestamp="2">
-    <list key="modules" value0="curso-jsp::org.eclipse.jst.jee.server:curso-jsp::jst.web::6.0"/>
-  </server>
-</servers>
