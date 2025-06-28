@@ -30,6 +30,7 @@ public class ServletLogin extends HttpServlet {
 	/* Recebe os dados pela URL em parâmetros */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		doPost(request, response);
 
 	}
 
@@ -46,6 +47,7 @@ public class ServletLogin extends HttpServlet {
 			if (login != null && !login.isEmpty() && senha != null && !senha.isEmpty()) {
 
 				ModelLogin modelLogin = new ModelLogin();
+				
 				modelLogin.setLogin(login);
 				modelLogin.setSenha(senha);
 
@@ -58,7 +60,7 @@ public class ServletLogin extends HttpServlet {
 					request.setAttribute("msg", "Login efetuado com sucesso!");
 					request.getSession().setAttribute("usuario", modelLogin.getLogin());
 
-					if (url == null || url.equals("null")) {
+					if (url == null || url.equals("null") || url.isEmpty()) {
 						url = "principal/principal.jsp";
 					}
 
@@ -71,13 +73,9 @@ public class ServletLogin extends HttpServlet {
 					request.setAttribute("msg", "Login ou senha inválidos");
 				}
 
-				RequestDispatcher redirecionar = request.getRequestDispatcher("/index.jsp");
-				redirecionar.forward(request, response);
-				return;
-
 			} else {
 
-				RequestDispatcher redirecionar = request.getRequestDispatcher("index.jsp");
+				RequestDispatcher redirecionar = request.getRequestDispatcher("/index.jsp");
 				request.setAttribute("msg", "Informe o login e a senha corretamente!");
 				redirecionar.forward(request, response);
 				return;
